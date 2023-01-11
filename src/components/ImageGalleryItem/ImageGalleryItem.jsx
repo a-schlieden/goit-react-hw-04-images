@@ -8,7 +8,7 @@ export const ImageGalleryItem = ({ img, bigImg, onImgClick }) => {
     <li className={style.ImageGalleryItem}>
       <img
         src={img}
-        alt="image"
+        alt=""
         onClick={() => onImgClick(bigImg)}
         className={style.ImageGalleryItemImage}
       />
