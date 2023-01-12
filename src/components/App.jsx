@@ -28,7 +28,7 @@ export default function App() {
       .fetchImages(formInput, pageNumber)
       .then(imagesFromBack => {
         if (imagesFromBack.hits.length > 0) {
-          setImages([...images, ...imagesFromBack.hits]);
+          setImages((prevState) => [...prevState, ...imagesFromBack.hits]);
           setStatus('resolved');
         } else {
           return setStatus('noImg');
